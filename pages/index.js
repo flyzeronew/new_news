@@ -1,8 +1,6 @@
 import CustomHead from '../components/CustomHead'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import styles from './index.module.scss'
-import classNames from 'classnames/bind'
 
 export default function Home() {
   return (

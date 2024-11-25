@@ -21,6 +21,7 @@ body {
   background: var(--background);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: "Roboto","Noto Sans TC",sans-serif;
 }
 
 * {
@@ -38,7 +39,4 @@ a {
   html {
     color-scheme: dark;
   }
-}
-main{
-  font-weight: 800;
 }

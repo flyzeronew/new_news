@@ -1,23 +1,20 @@
-import { Noto_Sans_TC, Lexend } from 'next/font/google';
+import { Noto_Sans_TC, Lexend, Roboto } from 'next/font/google';
 import "@/styles/globals.scss";
 
 export const noto = Noto_Sans_TC({
   weight: ["400", "500" ,"600" ,"800"],
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-noto-sans-tc', 
 });
 
-export const lexend = Lexend({
+export const roboto = Roboto({
+  weight: ["400","500","700"],
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-lexend',
 });
 
 export default function App({ Component, pageProps }) {
-  return (
-    <div className={`${noto.variable} ${lexend.variable}`}>
+  return (  
       <Component {...pageProps} />
-    </div>
   );
 }
