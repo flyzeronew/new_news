@@ -1,8 +1,11 @@
 import CustomHead from '../components/CustomHead'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import styles from './index.module.scss';
 
-export default function Home() {
+const Home = (props) => {
+  const thisPage='home';
+  const menu = props.menu;
   return (
     <>
       <CustomHead 
@@ -11,11 +14,32 @@ export default function Home() {
         keywords='新聞,氣象,食尚,星聞,焦點,新奇,健康,生活,科技,全球,社會,政經,運動,影劇,議題,直播,談談,Focus,NEWS,TVBS NEWS'
         url='https://news.tvbs.com.tw/'
       />        
-      <Header />
-      <main>
-        首頁
+      <Header menu={menu} />
+      <main className={styles.homePage}>
+        <div className='frameBox'>
+          <article>
+              主欄
+          </article>
+          <aside>
+              右欄
+          </aside>
+        </div>
       </main>
       <Footer />
     </>
   );
+}
+export default Home;
+
+export async function getStaticProps() {
+  const menuUrl = new URL('/api/menu', process.env.APP_URL)
+  const menuRes = await fetch(menuUrl)
+  const menu = await menuRes.json()
+
+  return {
+    props: {
+      menu,
+    },
+    revalidate: 300,
+  }
 }

@@ -1,3 +1,5 @@
+
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -35,8 +37,53 @@ a {
   text-decoration: none;
 }
 
+ol,ul {
+  list-style: none;
+  margin: 0;
+  padding: 0
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
+}
+.frameBox {
+  width: 1460px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+@media (max-width:1023px) {
+  .frameBox {
+      width:728px;
+      margin: 0 auto;
+  }
+}
+@media (max-width:767px) {
+  .frameBox {
+      width:428px;
+  }
+}
+@media (max-width:427px) {
+  .frameBox {
+      width:100%;
+  }
+}
+.flexBox{
+  display: flex;
+  justify-content: space-between;
+}
+header{
+  margin-bottom: 30px;
+}
+main{
+  margin-bottom: 50px;
+}
+article{
+  width: 1060px;
+  background-color: #ccc;
+}
+aside{
+  width: 300px;
+  background-color: #ccc;
 }
