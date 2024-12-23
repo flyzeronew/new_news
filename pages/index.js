@@ -31,6 +31,7 @@ const Home = (props) => {
 }
 export default Home;
 
+
 export async function getStaticProps() {
   const menuUrl = new URL('/api/menu', process.env.APP_URL)
   const menuRes = await fetch(menuUrl)
