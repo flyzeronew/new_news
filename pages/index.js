@@ -18,7 +18,7 @@ const Home = (props) => {
       <main className={styles.homePage}>
         <div className='frameBox'>
           <article>
-              主欄1224練習
+              主欄1224練習222
           </article>
           <aside>
               右欄
