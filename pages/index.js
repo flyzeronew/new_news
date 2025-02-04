@@ -21,7 +21,7 @@ const Home = (props) => {
               主欄
           </article>
           <aside>
-              右欄12
+              右欄
           </aside>
         </div>
       </main>
