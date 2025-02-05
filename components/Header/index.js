@@ -5,9 +5,10 @@ const cx = classnames.bind(styles);
 
 const Header = (props) => {
     const menu = props.menu;
+    console.log(menu);
     return (
         <header>
-            <div className={cx("menu")} >
+            {/* <div className={cx("menu")} >
                 <div className="frameBox">
                     <div className={cx("list")} >
                         <ul>
@@ -21,7 +22,7 @@ const Header = (props) => {
                         </ul>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </header>
     );
 };

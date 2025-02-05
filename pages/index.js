@@ -5,8 +5,7 @@ import styles from './index.module.scss';
 
 const Home = (props) => {
   const thisPage='home';
-  const menu = props.menu;
-  console.log(menu);
+  const menu = props.menu;  
   return (
     <>
       <CustomHead 
@@ -15,7 +14,7 @@ const Home = (props) => {
         keywords='新聞,氣象,食尚,星聞,焦點,新奇,健康,生活,科技,全球,社會,政經,運動,影劇,議題,直播,談談,Focus,NEWS,TVBS NEWS'
         url='https://news.tvbs.com.tw/'
       />        
-      {/* <Header menu={menu} /> */}
+      <Header menu={menu} />
       <main className={styles.homePage}>
         <div className='frameBox'>
           <article>
