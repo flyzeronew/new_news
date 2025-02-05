@@ -5,7 +5,7 @@ import styles from './index.module.scss';
 
 const Home = (props) => {
   const thisPage='home';
-  // const menu = props.menu;
+  const menu = props.menu;
   return (
     <>
       <CustomHead 
@@ -31,15 +31,15 @@ const Home = (props) => {
 }
 export default Home;
 
-// export async function getStaticProps() {
-//   const menuUrl = new URL('/api/menu', process.env.APP_URL)
-//   const menuRes = await fetch(menuUrl)
-//   const menu = await menuRes.json()
+export async function getStaticProps() {
+  const menuUrl = new URL('/api/menu', process.env.APP_URL)
+  const menuRes = await fetch(menuUrl)
+  const menu = await menuRes.json()
 
-//   return {
-//     props: {
-//       menu,
-//     },
-//     revalidate: 300,
-//   }
-// }
+  return {
+    props: {
+      menu,
+    },
+    revalidate: 300,
+  }
+}
