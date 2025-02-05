@@ -32,14 +32,37 @@ const Home = (props) => {
 export default Home;
 
 export async function getStaticProps() {
-  const menuUrl = new URL('/api/menu', process.env.APP_URL)
-  const menuRes = await fetch(menuUrl)
-  const menu = await menuRes.json()
+  try {
+    const menuUrl = new URL('/api/menu', process.env.APP_URL);
+    const menuRes = await fetch(menuUrl);
 
-  return {
-    props: {
-      menu,
-    },
-    revalidate: 300,
+    if (!menuRes.ok) {
+      return {
+        props: {
+          menu: null,
+          error: 'Failed to fetch menu data',
+        },
+        revalidate: 300, 
+      };
+    }
+
+    const menu = await menuRes.json();
+    return {
+      props: {
+        menu,
+      },
+      revalidate: 300,
+    };
+    
+  } catch (error) {
+    console.error('Error fetching menu:', error);
+
+    return {
+      props: {
+        menu: null,
+        error: 'An unexpected error occurred',
+      },
+      revalidate: 300,
+    };
   }
 }
