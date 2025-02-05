@@ -6,6 +6,7 @@ import styles from './index.module.scss';
 const Home = (props) => {
   const thisPage='home';
   const menu = props.menu;
+  console.log(menu);
   return (
     <>
       <CustomHead 
