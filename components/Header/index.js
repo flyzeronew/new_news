@@ -14,7 +14,7 @@ const Header = (props) => {
                         <ul>
                             {menu.map((item, index) => (
                                 <li key={index}>
-                                    <a href=''>
+                                    <a href={item.url}>
                                         {item.title}
                                     </a>
                                 </li>
