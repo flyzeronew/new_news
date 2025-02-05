@@ -12,13 +12,13 @@ const Header = (props) => {
                 <div className="frameBox">
                     <div className={cx("list")} >
                         <ul>
-                            {/* {menu.map((item, index) => (
+                            {menu.map((item, index) => (
                                 <li key={index}>
                                     <a href=''>
                                         {item.title}
                                     </a>
                                 </li>
-                            ))} */}
+                            ))}
                         </ul>
                     </div>
                 </div>
